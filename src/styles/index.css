@@ -5,8 +5,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 100vh;
+  width: 100%;
   background-color: #F8F8F6;
 }
 
@@ -14,7 +14,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 15vh;
+  height: 15vh;
+  border-bottom: 2px solid black;
 }
 header .header-nav {
   list-style: none;
@@ -26,4 +27,36 @@ header .header-nav li {
 }
 header .page-title {
   font-family: "Montserrat", sans-serif;
+}
+
+.content-container {
+  min-height: 85vh;
+  padding-top: 4.5vh;
+}
+.content-container .search-container {
+  border: solid 2px black;
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 1.5vw;
+  text-align: center;
+  border-radius: 25px;
+}
+.content-container .search-container h2 {
+  font-size: 2.1rem;
+  margin: 0 0;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 3vh;
+}
+.content-container .search-container .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container .search-container .form-container input {
+  padding: 10px;
+  min-width: 50%;
+  margin-bottom: 1.5vh;
+}
+.content-container .search-container .form-container button {
+  padding: 9px 2.5rem;
 }/*# sourceMappingURL=index.css.map */
