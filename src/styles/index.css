@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
 
@@ -43,20 +43,48 @@ header .page-title {
 }
 .content-container .search-container h2 {
   font-size: 2.1rem;
-  margin: 0 0;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 3vh;
+  margin: 0 3vh;
 }
 .content-container .search-container .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  max-width: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 2vh;
+  border-bottom: 1px solid grey;
 }
 .content-container .search-container .form-container input {
-  padding: 10px;
-  min-width: 50%;
-  margin-bottom: 1.5vh;
+  min-height: 100%;
+  position: absolute;
+  bottom: 0px;
+  min-width: 100%;
+  border: none;
+  background-color: #F8F8F6;
+  padding-top: 10px;
 }
-.content-container .search-container .form-container button {
-  padding: 9px 2.5rem;
+.content-container .search-container .form-container input:focus {
+  outline: none;
+}
+.content-container .search-container .form-container span {
+  min-width: 50%;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+.content-container .search-container .form-container span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid grey;
+  left: 0px;
+  bottom: 0px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.content-container .search-container .form-container input:focus + span::after {
+  transform: translateX(0%);
 }/*# sourceMappingURL=index.css.map */
