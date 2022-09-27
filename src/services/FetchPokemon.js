@@ -9,7 +9,7 @@ export const fetchPokemon = async (pokeName) => {
             url: `${baseUrl}${pokeName}`,
             responseType: 'json'
         });
-
+        
         return response.data
 
     } catch (err) {

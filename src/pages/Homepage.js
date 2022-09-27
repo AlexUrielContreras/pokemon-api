@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
 import { fetchPokemon } from '../services/FetchPokemon';
+import { PokemonCard } from '../components/PokemonCard';
 
 function Homepage() {
     const [pokeName, setPokeName] = useState('');
-    const [pokeData, setPokeData] = useState('')
+    const [pokeData, setPokeData] = useState(null);
 
     const updateName = (e) => {
         let name = e.target.value;
@@ -13,26 +15,31 @@ function Homepage() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
-        setPokeName('')
-
         const response = await fetchPokemon(pokeName);
-        setPokeData(JSON.stringify(response.abilities))
+        setPokeData(response);  
     }
 
     return (
-        <section className='search-container'>
-            <div className='idk'>
-                <h2>Search for your Favorite Pokemon</h2>
-                <form onSubmit={handleFormSubmit}>
-                    <div className='form-container'>
-                        <input type='text' autoComplete='off' id='search-pokemon' name='search-pokemon' value={pokeName} onChange={updateName}/>
-                        <label htmlFor='search-pokemon'></label>
-                    </div>
-                    <button type='submit'>Search</button>
-                </form>
-            </div>
-            {pokeData}
-        </section>
+        <div className='content-container'>
+            <section className='search-container'>
+                <div className='idk'>
+                    <h2>Search for your Favorite Pokemon</h2>
+                    <form onSubmit={handleFormSubmit}>
+                        <div className='form-container'>
+                            <input type='text' autoComplete='off' id='search-pokemon' name='search-pokemon' onBlur={updateName} />
+                            <label htmlFor='search-pokemon'></label>
+                        </div>
+                        <button type='submit'>Search</button>
+                    </form>
+                </div>
+            </section>
+
+            <section className='pokeInfo'>
+            {pokeData && ( 
+                <PokemonCard {...pokeData} />
+            )}  
+            </section>
+        </div>
     )
 };
 
