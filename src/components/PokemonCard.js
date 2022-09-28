@@ -2,18 +2,25 @@
 export function PokemonCard(props) {
   const { 
     name,
+    stats,
     abilities,
     base_experience,
     height,
     weight,
+    sprites
   } = props;
 
+  // grabs the pokemon sprite link 
+  const pokeImageLink = sprites.front_default;
   
-    return (
-        <>
-            
-        </>
-    )
+  return ( 
+    <>
+      <div className='poke-stats'>
+          <img src={pokeImageLink} />
+          <h2>{name.toUpperCase()}</h2>
+      </div>  
+    </>     
+  )
 };
 
 export default PokemonCard

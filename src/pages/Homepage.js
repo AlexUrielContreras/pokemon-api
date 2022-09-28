@@ -33,12 +33,12 @@ function Homepage() {
                     </form>
                 </div>
             </section>
-
-            <section className='pokeInfo'>
             {pokeData && ( 
-                <PokemonCard {...pokeData} />
+                <section className='poke-info'>
+                    <PokemonCard {...pokeData} />
+                </section>
             )}  
-            </section>
+            
         </div>
     )
 };

@@ -1,7 +1,8 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
 }
 
 html,
@@ -114,6 +115,31 @@ header {
                 transform: translateX(0%);
             }
 
+        }
+    }
+
+    .poke-info {
+        margin: 2.5rem auto;
+        width: clamp(400px, 35vw, 1000px);
+        min-height: 50vh;
+        border-radius: 25px;
+        border: 2px solid black;
+
+        .poke-stats {
+            text-align: center;
+            position: relative;
+        
+            img {
+                min-width: 28%;
+                min-height: auto;
+            } 
+
+            h2 {
+                position:absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translate(-50%, -10%)
+            }
         }
     }
 }
