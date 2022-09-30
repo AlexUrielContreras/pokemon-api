@@ -1,5 +1,6 @@
+import AbilityList from './AbilityList';
 
-export function PokemonCard(props) {
+function PokemonCard(props) {
   const { 
     name,
     stats,
@@ -18,9 +19,12 @@ export function PokemonCard(props) {
       <div className='poke-stats'>
           <img src={pokeImageLink} />
           <h2>{name.toUpperCase()}</h2>
-      </div>  
+      </div> 
+      <div className='poke-list-items'>
+        <AbilityList {...abilities} />
+      </div> 
     </>     
   )
 };
 
-export default PokemonCard
+export default PokemonCard;

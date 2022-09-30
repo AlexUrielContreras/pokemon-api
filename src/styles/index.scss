@@ -133,12 +133,13 @@ header {
                 min-width: 28%;
                 min-height: auto;
             } 
-
+            
             h2 {
-                position:absolute;
-                bottom: 10%;
+                position: absolute;
+                bottom: -5%;
                 left: 50%;
-                transform: translate(-50%, -10%)
+                transform: translate(-50%, -10%);
+                letter-spacing: 1.5px
             }
         }
     }

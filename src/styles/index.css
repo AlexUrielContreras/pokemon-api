@@ -119,7 +119,8 @@ header .page-title {
 }
 .content-container .poke-info .poke-stats h2 {
   position: absolute;
-  bottom: 10%;
+  bottom: -5%;
   left: 50%;
   transform: translate(-50%, -10%);
+  letter-spacing: 1.5px;
 }/*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { fetchPokemon } from '../services/FetchPokemon';
-import { PokemonCard } from '../components/PokemonCard';
+import PokemonCard from '../components/PokemonCard';
 
 function Homepage() {
     const [pokeName, setPokeName] = useState('');
