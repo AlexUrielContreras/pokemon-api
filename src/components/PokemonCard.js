@@ -16,12 +16,22 @@ function PokemonCard(props) {
   
   return ( 
     <>
-      <div className='poke-stats'>
+      <div className='poke-greeting'>
           <img src={pokeImageLink} />
           <h2>{name.toUpperCase()}</h2>
       </div> 
       <div className='poke-list-items'>
-        <AbilityList {...abilities} />
+
+        <div className='poke-abilities'>
+          <h3>Stats</h3>
+          
+        </div>
+
+        <div className='poke-abilities'>
+          <h3>Abilities</h3>
+          <AbilityList {...abilities} />
+        </div>
+        
       </div> 
     </>     
   )

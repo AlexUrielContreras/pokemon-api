@@ -10,11 +10,11 @@ function AbilityList(props) {
     }
 
     return (
-        <>
+        <ul>
             {abilities.map(skill => (
-                <div key={skill}>{skill}</div>
+                <li key={skill}>{skill}</li>    
             ))}
-        </>
+        </ul>
     )
 };
 
