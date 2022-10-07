@@ -1,15 +1,13 @@
 import AbilityList from "./AbilityList";
 import StatList from "./StatList";
 
-function PokemonCard(props) {
+function PokemonCard( props ) {
   const { name, stats, abilities, base_experience, height, weight, sprites } = props;
-
-  console.log(props)
-
+  
   // grabs the pokemon sprite link
   const pokeImageLinkFront = sprites.front_default;
   const pokeImageLinkBack = sprites.back_default;
-  
+
 
   return (
     <>
