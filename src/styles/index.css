@@ -116,7 +116,6 @@ header .page-title {
 }
 .content-container .poke-info .poke-greeting {
   text-align: center;
-  position: relative;
 }
 .content-container .poke-info .poke-greeting img {
   min-width: 28%;
@@ -124,16 +123,12 @@ header .page-title {
 }
 .content-container .poke-info .poke-greeting h2 {
   font-size: 2.5rem;
-  position: absolute;
-  bottom: -12%;
-  left: 50%;
-  transform: translate(-50%, -10%);
   letter-spacing: 1.5px;
 }
 .content-container .poke-info .poke-list-items {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .content-container .poke-info .poke-list-items h3 {
   font-size: 2rem;

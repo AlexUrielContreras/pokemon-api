@@ -86,7 +86,6 @@ header {
             border-bottom: 1px solid grey;
 
             input {
-
                 position: absolute;
                 bottom: 0px;
                 min-width: 100%;
@@ -132,7 +131,7 @@ header {
 
         .poke-greeting {
             text-align: center;
-            position: relative;
+         
         
             img {
                 min-width: 28%;
@@ -141,10 +140,7 @@ header {
             
             h2 {
                 font-size: 2.5rem;
-                position: absolute;
-                bottom: -12%;
-                left: 50%;
-                transform: translate(-50%, -10%);
+               
                 letter-spacing: 1.5px
             }
         }
@@ -152,7 +148,7 @@ header {
         .poke-list-items {
             display: flex;
             justify-content: space-around;
-            margin-top: 3rem;
+            margin-top: 2rem;
 
             h3 {
                 font-size: 2rem;

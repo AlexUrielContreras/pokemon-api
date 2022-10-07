@@ -13,7 +13,6 @@ export const fetchPokemon = async (pokeName) => {
         return response.data
 
     } catch (err) {
-
         console.error(err)
     }
    
